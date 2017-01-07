@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Storystrap Template</title>
+    <meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- bower:css -->
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.css" />
+    <!-- endbower -->
+
+    <!-- bower:js -->
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- endbower -->
+
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- endinject -->
+
+    <!-- inject:js -->
+    <script src="/js/test.js"></script>
+    <!-- endinject -->
+
+</head>
+
+<body>
+    <header class="navbar navbar-bright navbar-fixed-top" role="banner">
+        <div class="container">
+            <nav class="collapse navbar-collapse" role="navigation">
+                <ul class="nav navbar-nav">
+                    <% for(var i=0; i<nav.length; i++) {%>
+                        <li>
+                            <a href="<%= nav[i].Link %>">
+                                <%= nav[i].Text %>
+                            </a>
+                        </li>
+                        <% } %>
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <br>
+            <div class="col-md-6 col-sm-6">
+                Sign In
+                <form name="signInForm" action="/auth/signIn" method="post">
+                    <input name="userName" id="userName">
+                    <input name="password" id="password">
+                    <input type="submit" value="Sign In">
+                </form>
+            </div>
+            <div class="col-md-6 col-sm-6">
+                Sign Up
+                <form name="signUpForm" action="/auth/signUp" method="post">
+                    <input name="userName" id="userName">
+                    <input name="password" id="password">
+                    <input type="submit" name="Signup" value="Sign up">
+                </form>
+            </div>
+        </div>
+
+
+</body>
+
+</html>
